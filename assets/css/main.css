@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .flex::before,
+    .flex::after {
+        display: none !important;
+    }
+    
+    body{
+        @apply bg-page font-poppins
+    }
+}
+
+@layer components{
+    .card{
+        @apply bg-white relative p-6 rounded-[26px] flex flex-col gap-y-4 md:max-w-[500px]
+    }
+
+    .input-field{
+        @apply placeholder:text-grey text-dark py-[11px] px-6 rounded-[100px] outline outline-[1.4px]  outline-dark focus:outline-primary
+    }
+
+    .btn{
+        @apply rounded-full py-[11px] px-9 font-semibold text-center capitalize
+    }
+
+    .btn-primary{
+        @apply bg-primary text-white
+    }
+}
+
+@layer utilities{
+    .form-group{
+        @apply flex flex-col gap-2
+    }
+
+    .nav-link{
+        @apply p-[11px] flex items-center gap-4
+    }
+
+    .nav-link.active {
+        @apply bg-primary rounded-2xl text-white font-semibold
+    }
+
+    .nav-link.active img{
+        @apply brightness-0 invert
+    }
+
+    .form-icon-search{
+        @apply sm:bg-[url('/assets/svgs/ic-search.svg')] bg-no-repeat bg-[center_right_24px]
+    }
+
+    .form-icon-chevron_down{
+        @apply bg-[url('/assets/svgs/ic-chevron-down.svg')] bg-no-repeat bg-[center_right_24px]
+    }
+
+    .notification-dot{
+        @apply after:content-end after:bg-green-500 after:w-[6px] after:h-[6px] after:absolute after:z-30 after:rounded-full after:top-[12px] after:right-[15px]
+    }
+
+    .union-images img, .union-images span{
+        @apply outline outline-2 outline-white w-9 h-9 -ml-2 first:ml-0 rounded-full
+    }
+}
