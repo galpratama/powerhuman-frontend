@@ -2,12 +2,7 @@
   <div class="lg:pr-[70px] py-[50px] lg:ml-[320px] xl:ml-[365px] px-4 lg:pl-0">
     <!-- Top Section -->
     <section
-      class="
-        flex flex-col flex-wrap
-        justify-between
-        gap-6
-        md:items-center md:flex-row
-      "
+      class="flex flex-col flex-wrap justify-between gap-6  md:items-center md:flex-row"
     >
       <div class="flex items-center justify-between gap-4">
         <a href="#" id="toggleOpenSidebar" class="lg:hidden">
@@ -71,12 +66,7 @@
       <!-- Section Header -->
       <div class="mb-[30px]">
         <div
-          class="
-            flex flex-col
-            justify-between
-            gap-6
-            sm:items-center sm:flex-row
-          "
+          class="flex flex-col justify-between gap-6  sm:items-center sm:flex-row"
         >
           <div>
             <div class="text-xl font-medium text-dark">Available</div>
@@ -148,6 +138,7 @@
 </template>
 <script>
 export default {
-  layout: 'dashboard',
+    layout: 'dashboard',
+  middleware: 'auth',
 }
 </script>
